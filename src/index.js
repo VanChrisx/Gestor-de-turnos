@@ -171,7 +171,7 @@ btnForm.addEventListener("click", function(){
 })
 
 function redirect(){
-    window.location.href = '/pages/turnpatient.html';
+    window.location.href = './pages/turnpatient.html';
 } 
 
 const selectHealthInsuranceFill = (health) =>{
