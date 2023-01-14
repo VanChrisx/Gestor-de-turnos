@@ -1,0 +1,18 @@
+#turn__card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "patient medic"
+    "date date ";
+}
+
+#patient{
+    grid-area: patient;
+}
+#medic{
+    grid-area: medic;
+}
+#date{
+    grid-area: date;
+}

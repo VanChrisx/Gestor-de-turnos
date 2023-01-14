@@ -31,8 +31,8 @@ const medic = [
     },
     {
         "id":6,
-        "first_name":"Willamina",
-        "last_name":"Cogzell",
+        "first_name":"Brenda",
+        "last_name":"Ferri",
         "speciality":"Pediatría"
     },
     {
@@ -120,16 +120,66 @@ const medic = [
         "speciality":"Cardiología"
     }
 ]
+const health__insurances = ["Swiss Medical Group","OSDE","Galeno","Medicus","OSECAC","Omint","PAMI"]
+
 const speciality=["Ginecología","Pediatría","Cardiología","Clinico","Traumatología"];
 
+
 let select = document.getElementById("medic__select");
-let selectSp = document.getElementById("speciality__select")
+let selectSp = document.getElementById("speciality__select");
+
+let selectHealth = document.getElementById("health__insurance");
+let btnForm = document.getElementById("button__form");
+
+let firstname = document.getElementById("first__name");
+let surname = document.getElementById("last__name");
+let birthday = document.getElementById("birthday__date");
+let id = document.getElementById("id__number");
+let healthInsurance = document.getElementById("health__insurance");
+let healthId = document.getElementById("health__id");
+let medicSp = document.getElementById("speciality__select");
+let medics = document.getElementById("medic__select");
+
+console.log(healthInsurance.value)
 
 selectSp.addEventListener("change",function(){
     document.querySelector('#medic__select').innerHTML = '';
     document.querySelector('#medic__select').innerHTML = '<option value="">--Seleccion Profesional--</option>'
     filterBySpeciality(selectSp.value);
 })
+btnForm.addEventListener("click", function(){   
+    
+    
+    if(firstname.value != "" && surname.value != "" && birthday.value != "" && id.value != "" && healthInsurance.value != "" && healthId.value != "" && medicSp.value != "" && medics.value != "" ){
+        const patientData = {
+            userName:firstname.value,
+            userSurname:surname.value,
+            userBirthday:birthday.value,
+            userId:id.value,
+            userHealthInsurance:healthInsurance.value,
+            userHealthId:healthId.value,
+            medMedicSp:medicSp.value,
+            medMedics:medics.value
+        }
+        sessionStorage.setItem("patientData", JSON.stringify(patientData))
+        redirect();
+    
+    }else{
+        alert("Asegurese de rellenar todos los campos por favor");
+    }
+    
+})
+
+function redirect(){
+    window.location.href = '/pages/turnpatient.html';
+} 
+
+const selectHealthInsuranceFill = (health) =>{
+    health.forEach(e=>{
+        let option = new Option(e)
+        selectHealth.appendChild(option);
+    })
+}
 
 const selectSpecialFill = (medSp) =>{
     medSp.forEach(e =>{
@@ -145,8 +195,12 @@ function filterBySpeciality(medSpecial){
 
 function selectMedicFill(medfill){
     medfill.forEach(e => {
-        let option = new Option(e.first_name + " " + e.last_name, e.id)  
+        let option = new Option(e.first_name + " " + e.last_name)  
         select.appendChild(option);
     });
 }
+
+
 selectSpecialFill(speciality);
+
+selectHealthInsuranceFill(health__insurances);

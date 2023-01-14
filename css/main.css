@@ -1,0 +1,119 @@
+#turn__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "patient medic" "date date ";
+}
+
+#patient {
+  grid-area: patient;
+}
+
+#medic {
+  grid-area: medic;
+}
+
+#date {
+  grid-area: date;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #DEF5E5;
+  color: whitesmoke;
+}
+
+header a {
+  text-decoration: none;
+}
+header a h1 {
+  font-size: 3.5em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background-color: #BCEAD5;
+  width: 80%;
+  margin: 3% auto;
+}
+
+form {
+  width: 50%;
+  margin: 5% auto;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  background-color: #9ED5C5;
+  vertical-align: middle;
+  width: 100%;
+  margin-top: 2%;
+  padding: 2%;
+  border-radius: 20px;
+}
+form div label {
+  display: block;
+  align-self: flex-start;
+  margin: 3% 0;
+  width: 70%;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+form div input, form div select, form div button {
+  align-self: flex-start;
+  justify-self: center;
+  width: 100%;
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+}
+form div button {
+  font-size: 1.3rem;
+  color: whitesmoke;
+  border-color: whitesmoke;
+  border: none;
+  background-color: #8EC3B0;
+}
+
+#turn__card {
+  width: 80%;
+  margin: 10% auto;
+}
+#turn__card h2 {
+  background-color: #8EC3B0;
+  align-self: center;
+  border-radius: 10px;
+  font-size: 2em;
+}
+#turn__card div {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background-color: #BCEAD5;
+  width: 98%;
+  padding: 2%;
+  margin-top: 1%;
+}
+#turn__card div div {
+  background-color: #9ED5C5;
+  border-radius: 10px;
+}
+#turn__card div div label {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-decoration: underline;
+  margin: 2% 0;
+}
+#turn__card div div p {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=main.css.map */

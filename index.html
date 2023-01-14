@@ -4,27 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="/css/main.css">
     <title>PreEntrega 3 Van Noppen</title>
 </head>
 <body>
     <header>
-        <h1>Clinica San Pietro</h1>
-        <label for="medic__select">Seleccione la especialidad deseada<br></label>
-
-        <select name="medicSp" id="speciality__select">
-            <option value="">--Seleccione Especialidad--</option>
-        </select>
-        <br>
-
-        <label for="medic__select">Seleccion el profesional por el que desea ser atendido<br></label>
-        <select name="medics" id="medic__select">
-            <option value="">--Seleccion Profesional--</option>
-        </select>
+        <a href="/index.html"><h1> Clinica Provehito in altum</h1></a>        
     </header>
-    <main>
-    </main>
+    <main id="main">
 
-    <script src="/src/index.js"></script>
+        <form action="" class="patient__form" >
+            <div>
+                <label for="first__name">Nombre</label>
+                <input type="text" name="first__name" id="first__name">
+            </div>
+            
+            <div>
+                <label for="last__name">Apellido</label>
+                <input type="text" name="last__name" id="last__name">
+            </div>
+            <div>
+                <label for="birthday__date">Fecha de Nacimiento</label>
+                <input type="date" name="birthday__date" id="birthday__date">
+            </div>
+            <div>
+                <label for="id__number">Numero de Documento</label>
+                <input type="text" name="id__number" id="id__number">
+            </div>
+            <div>
+                <label for="health__insurance">Seleccione su obra social o prepaga</label>
+                <select name="health__insurance" id="health__insurance">
+                    <option value="">--Seleccion su Obras Social o Prepaga--</option>
+                </select>
+            </div>
+            <div>
+                <label for="health__id">Numero de Obra Social o prepaga</label>
+                <input type="text" name="health__id" id="health__id">
+            </div>
+            <div>
+                <label for="medicsp">Seleccione la especialidad deseada</label>
+                <select name="medicsp" id="speciality__select">
+                    <option value="">--Seleccione Especialidad--</option>
+                </select>
+            </div>
+            <div>
+                <label for="medics">Seleccion el profesional por el que desea ser atendido</label>
+                <select name="medics" id="medic__select">
+                    <option value="">--Seleccion Profesional--</option>
+                </select>
+            </div>
+            <div>
+                <button id="button__form" type="button">Siguiente</button>
+            </div>
+            
+        </form>
+    </main>
+    <script type="module" src="/src/indexs.js"></script>
 </body>
 </html>
