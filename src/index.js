@@ -161,7 +161,7 @@ btnForm.addEventListener("click", function(){
             medMedicSp:medicSp.value,
             medMedics:medics.value
         }
-        sessionStorage.setItem("patientData", JSON.stringify(patientData))
+        sessionStorage.setItem("patientData", JSON.stringify(patientData));
         redirect();
     
     }else{

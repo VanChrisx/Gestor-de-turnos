@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
 #turn__card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -28,11 +29,29 @@ body {
   color: whitesmoke;
 }
 
+header {
+  background-color: #8EC3B0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
 header a {
   text-decoration: none;
 }
 header a h1 {
+  position: relative;
+  top: 1%;
+  font-family: "Source Code Pro", monospace;
   font-size: 3.5em;
+  letter-spacing: -4px;
+  margin-top: 0%;
+  margin-left: 2%;
+}
+header img {
+  width: 100px;
+  height: 100px;
 }
 
 main {
@@ -43,12 +62,11 @@ main {
   width: 80%;
   margin: 3% auto;
 }
-
-form {
+main form {
   width: 50%;
   margin: 5% auto;
 }
-form div {
+main form div {
   display: flex;
   flex-direction: column;
   background-color: #9ED5C5;
@@ -58,7 +76,7 @@ form div {
   padding: 2%;
   border-radius: 20px;
 }
-form div label {
+main form div label {
   display: block;
   align-self: flex-start;
   margin: 3% 0;
@@ -66,7 +84,7 @@ form div label {
   font-size: 1.3rem;
   font-weight: bold;
 }
-form div input, form div select, form div button {
+main form div input, main form div select, main form div button {
   align-self: flex-start;
   justify-self: center;
   width: 100%;
@@ -74,7 +92,7 @@ form div input, form div select, form div button {
   border-radius: 10px;
   border: none;
 }
-form div button {
+main form div button {
   font-size: 1.3rem;
   color: whitesmoke;
   border-color: whitesmoke;
@@ -84,7 +102,7 @@ form div button {
 
 #turn__card {
   width: 80%;
-  margin: 10% auto;
+  margin: 3% auto;
 }
 #turn__card h2 {
   background-color: #8EC3B0;
@@ -100,6 +118,7 @@ form div button {
   width: 98%;
   padding: 2%;
   margin-top: 1%;
+  justify-self: center;
 }
 #turn__card div div {
   background-color: #9ED5C5;
