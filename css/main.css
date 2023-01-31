@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "patient medic" "date date ";
+  grid-template-areas: "patient medic" "date date " "button button";
 }
 
 #patient {
@@ -16,6 +16,11 @@
 
 #date {
   grid-area: date;
+}
+
+#button {
+  grid-area: button;
+  justify-self: center;
 }
 
 * {
@@ -52,6 +57,26 @@ header a h1 {
 header img {
   width: 100px;
   height: 100px;
+}
+
+#patient__info {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  margin: 2% auto;
+  text-align: center;
+}
+#patient__info div {
+  display: block;
+  background-color: #9ED5C5;
+  width: 30%;
+  padding: 1%;
+}
+#patient__info div label {
+  font-size: 1.5em;
+}
+#patient__info div p {
+  font-size: 2em;
 }
 
 main {
@@ -98,6 +123,8 @@ main form div button {
   border-color: whitesmoke;
   border: none;
   background-color: #8EC3B0;
+  margin-top: 3%;
+  border-radius: 15px;
 }
 
 #turn__card {
@@ -133,6 +160,45 @@ main form div button {
 #turn__card div div p {
   font-size: 1.5em;
   font-weight: 600;
+}
+#turn__card button {
+  font-size: 1.3rem;
+  color: whitesmoke;
+  border-color: whitesmoke;
+  border: none;
+  background-color: #8EC3B0;
+  margin-top: 3%;
+  border-radius: 15px;
+  align-self: center;
+  width: 80%;
+}
+
+#login {
+  width: 50%;
+}
+#login form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#login form button {
+  font-size: 1.3rem;
+  color: whitesmoke;
+  border-color: whitesmoke;
+  border: none;
+  background-color: #8EC3B0;
+  margin-top: 3%;
+  border-radius: 15px;
+}
+
+#btn__form {
+  font-size: 1.3rem;
+  color: whitesmoke;
+  border-color: whitesmoke;
+  border: none;
+  background-color: #8EC3B0;
+  margin-top: 3%;
+  border-radius: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */

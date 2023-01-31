@@ -10,3 +10,12 @@
     flex-direction: row;
 }
 
+@mixin button__template{
+    font-size: 1.3rem;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    border: none;
+    background-color: #8EC3B0;
+    margin-top: 3%;
+    border-radius: 15px;
+}

@@ -4,7 +4,8 @@
     grid-template-rows: auto;
     grid-template-areas: 
     "patient medic"
-    "date date ";
+    "date date "
+    "button button";
 }
 
 #patient{
@@ -15,4 +16,8 @@
 }
 #date{
     grid-area: date;
+}
+#button{
+    grid-area: button;
+    justify-self: center;
 }

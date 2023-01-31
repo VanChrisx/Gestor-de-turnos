@@ -31,4 +31,10 @@
             }    
         }
     }
+    button{
+        @include button__template;
+        align-self: center;
+        
+        width: 80%;
+    }
 }

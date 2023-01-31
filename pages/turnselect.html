@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+    
+    <title>PreEntrega 3 Van Noppen</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><h1>Clinica Provehito in Altum</h1></a>        
+        <img src="../assets/pngegg.png" alt="logo de la clinica">
+    </header>
+    <section id="patient__info">
+        
+    </section>
+    <main id="main"> 
+        <form action="" class="patient__form wow animate__animated animate__fadeInLeft">
+            <h2>Complete el formulario para obtener su Turno</h2>
+            <div>
+                <label for="medicsp">Seleccione la especialidad deseada</label>
+                <select name="medicsp" id="speciality__select">
+                    <option value="">--Seleccione Especialidad--</option>
+                </select>
+            </div>
+            <div>
+                    <label for="medics">Seleccion el profesional por el que desea ser atendido</label>
+                    <select name="medics" id="medic__select">
+                    <option value="">--Seleccione Profesional--</option>
+                </select>
+            </div>
+            <div>
+                <label for="turn">Selecciona la fecha del turno</label>
+                <select name="turn" id="turn__select">
+                    <option value="">--Seleccione fecha--</option>
+                </select>
+            </div>
+            <div>
+                <label for="hour">Selecciona la fecha del turno</label>
+                <select name="hour" id="hour__select">
+                    <option value="">--Seleccione horario--</option>
+                </select>
+            </div>
+            <div>
+                <button id="button__form" type="button">Siguiente</button>
+            </div>
+            
+        </form>
+    </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../src/turnselect.js"></script>
+    <script src="../src/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
