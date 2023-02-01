@@ -1,0 +1,44 @@
+#main{
+    @include flex-mixin-column;
+    #turn__section{
+        margin: 2% auto;
+        width: 90%;
+        div{ 
+            background-color: #8EC3B0;
+            padding: 2%;
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 2%;
+           div{
+            @include flex-mixin-column;          
+                label{
+                    font-size: 1.3em;
+                    font-weight: bold;
+                }
+                p{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .link__div{
+        @include flex-mixin-row;
+        width: 20%;
+        justify-content: space-between;
+        .href__div{
+            background-color: #8EC3B0;
+            width: 49%;
+            height: 80px;
+            a{
+                margin: 20% auto;
+                text-decoration: none;
+                color: whitesmoke;
+            }
+        }
+        #close__session{
+            background-color: #8EC3B0;
+            color: whitesmoke;
+            border: none;
+        }     
+    }
+}

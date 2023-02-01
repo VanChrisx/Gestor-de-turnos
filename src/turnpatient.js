@@ -43,17 +43,17 @@ const turnData =  () =>{
             <h2>Datos del Medico</h2>
             <div>
                 <label for="medics"> Medico/a:</label>
-                <p>${patientData[1].medicName}</p>
+                <p>${patientData[patientData.length - 1].medicName}</p>
             </div>
             <div>
                 <label for="medicsp">Especialidad:</label>
-                <p>${patientData[1].medicSpe}</p>
+                <p>${patientData[patientData.length - 1].medicSpe}</p>
             </div>
         </div>
         <div id="date">
             <h2>Fecha del turno</h2>
             <div>
-                <p>${patientData[1].turnDate + " a las " + patientData[1].turnHour }<p>
+                <p>${patientData[patientData.length - 1].turnDate + " a las " + patientData[1].turnHour }<p>
             </div>
         </div>
         <button id="button">Confirmar turno</button>
@@ -69,5 +69,5 @@ const turnData =  () =>{
 turnData();
 
 function redirect(){
-    window.location.href = './turnselect.html';
+    window.location.href = './misturnos.html';
 } 

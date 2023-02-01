@@ -7,11 +7,17 @@ let selectSp = document.getElementById("speciality__select");
 let buttonTurn = document.getElementById("button__form");
 let selectTurn = document.getElementById("turn__select");
 let selectHour = document.getElementById("hour__select");
+let leaveSession = document.getElementById("close__session");
 
-const info = JSON.parse(sessionStorage.getItem("sessionData"));
+leaveSession.addEventListener("click",function(){
+    sessionStorage.removeItem("sessionData");
+    sessionStorage.removeItem("sessionTurn");
+    redirect('../index.html')
+})
 
 
 const patientInfo = ()=>{
+    const info = JSON.parse(sessionStorage.getItem("sessionData"));
     let output = `
         <div>
             <label>Nombre</label>
@@ -54,19 +60,40 @@ selectTurn.addEventListener('change',function(){
 })
 
 buttonTurn.addEventListener("click",function(){
-    if(select.value != "" && selectSp.value != "" && selectTurn != "" && selectHour != ""){
-        const medicInfo = {
-            medicName:select.value,
-            medicSpe:selectSp.value,
-            turnDate:selectTurn.value,
-            turnHour:selectHour.value
+    let info = JSON.parse(sessionStorage.getItem('sessionData'));
+    let newTurn = JSON.parse(sessionStorage.getItem('sessionTurn'));
+    console.log(info.length)
+    if(newTurn <= 1){
+        if(select.value != "" && selectSp.value != "" && selectTurn != "" && selectHour != ""){
+            const medicInfo = {
+                medicName:select.value,
+                medicSpe:selectSp.value,
+                turnDate:selectTurn.value,
+                turnHour:selectHour.value
+            }
+            console.log(info);
+            info.push(medicInfo)
+            sessionStorage.setItem('sessionTurn',JSON.stringify(info));
+            redirect('./turnpatient.html');
+        }else{
+            message("Rellene todos los campos por favor",'error')
         }
-        info.push(medicInfo)
+    }else if(newTurn){
+        if(select.value != "" && selectSp.value != "" && selectTurn != "" && selectHour != ""){
+            const medicInfo = {
+                medicName:select.value,
+                medicSpe:selectSp.value,
+                turnDate:selectTurn.value,
+                turnHour:selectHour.value
+            }
+            newTurn.push(medicInfo)
+            
+            sessionStorage.setItem('sessionTurn',JSON.stringify(newTurn));
+            redirect('./turnpatient.html');
 
-        sessionStorage.setItem('sessionTurn',JSON.stringify(info));
-        redirect();
-    }else{
-        message("Rellene todos los campos por favor",'error')
+        }else{
+            message("Rellene todos los campos por favor",'error')
+        }
     }
 })
 
@@ -116,8 +143,8 @@ const selectSpecialFill = (medSp) =>{
     })
 }
 
-function redirect(){
-    window.location.href = './turnpatient.html';
+function redirect(url){
+    window.location.href = url;
 } 
 
 const filterBySpeciality = (medSpecial) => {

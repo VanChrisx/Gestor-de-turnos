@@ -87,6 +87,27 @@ main {
   width: 80%;
   margin: 3% auto;
 }
+main div {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: space-between;
+}
+main div div {
+  background-color: #8EC3B0;
+  width: 49%;
+  height: 80px;
+}
+main div div a {
+  margin: 25% auto;
+  text-decoration: none;
+  color: whitesmoke;
+}
+main div #close__session {
+  background-color: #8EC3B0;
+  color: whitesmoke;
+  border: none;
+}
 main form {
   width: 50%;
   margin: 5% auto;
@@ -199,6 +220,54 @@ main form div button {
   background-color: #8EC3B0;
   margin-top: 3%;
   border-radius: 15px;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+}
+#main #turn__section {
+  margin: 2% auto;
+  width: 90%;
+}
+#main #turn__section div {
+  background-color: #8EC3B0;
+  padding: 2%;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 2%;
+}
+#main #turn__section div div {
+  display: flex;
+  flex-direction: column;
+}
+#main #turn__section div div label {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#main #turn__section div div p {
+  font-weight: bold;
+}
+#main .link__div {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: space-between;
+}
+#main .link__div .href__div {
+  background-color: #8EC3B0;
+  width: 49%;
+  height: 80px;
+}
+#main .link__div .href__div a {
+  margin: 20% auto;
+  text-decoration: none;
+  color: whitesmoke;
+}
+#main .link__div #close__session {
+  background-color: #8EC3B0;
+  color: whitesmoke;
+  border: none;
 }
 
 /*# sourceMappingURL=main.css.map */

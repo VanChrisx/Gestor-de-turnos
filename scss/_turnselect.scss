@@ -55,6 +55,26 @@ main{
     background-color:  #BCEAD5;
     width: 80%;
     margin:3% auto;
+    div{
+        @include flex-mixin-row;
+        width: 20%;
+        justify-content: space-between;
+        div{
+            background-color: #8EC3B0;
+            width: 49%;
+            height: 80px;
+            a{
+                margin: 25% auto;
+                text-decoration: none;
+                color: whitesmoke;
+            }
+        }
+        #close__session{
+            background-color: #8EC3B0;
+            color: whitesmoke;
+            border: none;
+        }
+    }
     form{
         width:50%;
         margin: 5% auto;
