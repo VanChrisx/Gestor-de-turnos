@@ -13,6 +13,7 @@ _**The user can register and take Turns for the Health Specialist they want**:_
 _Sass_
 _Grid_
 _Flex_
+_JavaScript_
 
 _**Used libraries**: SweetAlert, wow.js and Animation.css_
 
